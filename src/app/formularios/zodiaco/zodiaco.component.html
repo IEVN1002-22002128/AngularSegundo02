@@ -1,0 +1,129 @@
+<!-- <p>Zodiaco works!</p> -->
+
+<!-- <div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+
+      <h1 class="text-center">Datos Personales</h1>
+
+        <form [formGroup]="formulario">
+          <label>Nombre:</label><br>
+          <input type="text" class="form-control" formControlName="nombre"><br>
+
+          <label>Apellido paterno:</label><br>
+          <input type="text" class="form-control" formControlName="paterno"><br>
+
+          <label>Apellido materno:</label><br>
+          <input type="text" class="form-control" formControlName="materno"><br><br>
+
+      <h2 class="text-center">Fecha de nacimiento</h2>
+
+          <div class="row text-center">
+            <div class="col-md-4">
+              <label>Día:</label><br>
+              <input type="string" class="form-control" formControlName="dia">
+            </div>
+
+            <div class="col-md-4">
+              <label>Mes:</label><br>
+              <input type="string" class="form-control" formControlName="mes">
+            </div>
+
+            <div class="col-md-4">
+              <label>Año:</label><br>
+              <input type="string" class="form-control"formControlName="año">
+            </div>
+          </div><br>
+
+        <h2>Sexo</h2>
+          <label>
+          <input type="radio" formControlName="sexo" value="Masculino">Masculino</label><br>
+          <label>
+          <input type="radio" formControlName="sexo" value="Femenino">Femenino</label><br><br>
+
+            <button class="btn btn-secondary" (click)="imprimir()">Imprimir</button>
+        </form>
+      </div>
+
+
+      <div class="col-md-6 text-center  mt-5"  >
+        <p> {{ Nombre }}</p>
+        <p> {{ edad }} </p>
+        <p> {{ chino }} </p>
+        <img [src]="imagen" width="250">
+        <p>{{ sexo }}</p>
+      </div>
+
+
+
+  </div>
+</div>
+ -->
+
+<div class="max-w-4xl mx-auto mt-10 p-5">
+  <h1 class="text-2xl font-bold text-center mb-6">Datos Personales</h1>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+    <form [formGroup]="formulario" class="space-y-4">
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">Nombre:</label>
+        <input type="text" formControlName="nombre" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+      </div>
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">Apellido paterno:</label>
+        <input type="text" formControlName="paterno" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+      </div>
+
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900">Apellido materno:</label>
+        <input type="text" formControlName="materno" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+      </div>
+
+      <h2 class="text-lg font-semibold mt-4 mb-2 text-gray-900 dark:text-white">Fecha de nacimiento</h2>
+      <div class="grid grid-cols-3 gap-4">
+        <div>
+          <label class="block mb-2 text-sm font-medium text-gray-900">Día:</label>
+          <input type="text" formControlName="dia" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        </div>
+        <div>
+          <label class="block mb-2 text-sm font-medium text-gray-900">Mes:</label>
+          <input type="text" formControlName="mes" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        </div>
+        <div>
+          <label class="block mb-2 text-sm font-medium text-gray-900">Año:</label>
+          <input type="text" formControlName="año" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        </div>
+      </div>
+
+      <h2 class="text-lg font-semibold mt-4 mb-2 text-gray-900">Sexo</h2>
+      <div class="flex space-x-4">
+        <label class="flex items-center space-x-2 text-gray-900 ">
+          <input type="radio" formControlName="sexo" value="Masculino" class="w-4 h-4 border-gray-300 rounded focus:ring-blue-500">
+          <span>Masculino</span>
+        </label>
+        <label class="flex items-center space-x-2 text-gray-900">
+          <input type="radio" formControlName="sexo" value="Femenino" class="w-4 h-4 border-gray-300 rounded focus:ring-blue-500">
+          <span>Femenino</span>
+        </label>
+      </div>
+
+      <button type="button" (click)="imprimir()" class="w-full bg-blue-600 text-white p-2.5 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium">
+        Imprimir
+      </button>
+    </form>
+
+    <div class="text-center space-y-2 mt-6 md:mt-0">
+      <p>{{ Nombre }}</p>
+      <p>{{ edad }}</p>
+      <p>{{ chino }}</p>
+      <img [src]="imagen" width="250" class="mx-auto">
+      <p>{{ sexo }}</p>
+    </div>
+  </div>
+</div>
+
+
+
+

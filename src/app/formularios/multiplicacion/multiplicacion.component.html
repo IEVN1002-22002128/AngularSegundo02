@@ -1,0 +1,73 @@
+<!-- <p>multiplicacion works!</p> -->
+
+<!-- <div>
+  <h1>Calcular Distancia</h1>
+  <form [formGroup]="formulario">
+    <div class="mb-3">
+      <label for="x1" class="form-label">X1</label>
+      <input type="number" id="x1" class="form-control" formControlName="x1"><br>
+
+      <label for="y1" class="form-label">Y1</label>
+      <input type="number" id="y1" class="form-control" formControlName="y1"><br>
+
+      <label for="x2" class="form-label">X2</label>
+      <input type="number" id="x2" class="form-control" formControlName="x2"><br>
+
+      <label for="y2" class="form-label">Y2</label>
+      <input type="number" id="y2" class="form-control" formControlName="y2"><br>
+
+      <button class="btn btn-primary" (click)="multiNumeros()">Calcular</button>
+      <h2>Resultado: {{ resultado }}</h2>
+    </div>
+  </form>
+</div> -->
+
+<form class="max-w-sm mx-auto mt-10" [formGroup]="formulario">
+  <div class="mb-5">
+    <label for="x1" class="block mb-2 text-sm font-medium text-gray-900">Numero X1</label>
+    <input
+      type="number"
+      id="x1"
+      formControlName="x1"
+      class="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base "
+    />
+  </div>
+
+  <div class="mb-5">
+    <label for="y1" class="block mb-2 text-sm font-medium text-gray-900">Numero Y1</label>
+    <input
+      type="number"
+      id="y1"
+      formControlName="y1"
+      class="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base"
+    />
+  </div>
+
+  <div class="mb-5">
+    <label for="x2" class="block mb-2 text-sm font-medium text-gray-900">Numero X2</label>
+    <input
+      type="number"
+      id="x2"
+      formControlName="x2"
+      class="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base"
+    />
+  </div>
+
+  <div class="mb-5">
+    <label for="y2" class="block mb-2 text-sm font-medium text-gray-900">Numero Y2</label>
+    <input
+      type="number"
+      id="y2"
+      formControlName="y2"
+      class="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base"
+    />
+  </div>
+  <button
+    type="button"
+    (click)="calcular()"
+    class="w-full bg-blue-600 text-white p-2.5 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium"
+  >
+    Calcular
+  </button>
+  <h2 class="mt-4 text-gray-900">Resultado: {{ resultado }}</h2>
+</form>
